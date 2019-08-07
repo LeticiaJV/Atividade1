@@ -7,7 +7,6 @@ public class Projeto1_Tabuada {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
 	int numero;
-        boolean validacao;
         char opcao;
 	do
 	{
@@ -20,20 +19,14 @@ public class Projeto1_Tabuada {
     		    System.out.println(n + " x " + numero + " = " + (n * numero));
     		}
     		System.out.println("Resultado obtido. Deseja informar outro número <S/N>?\n");
-    		opcao = entrada.next().charAt(0);
-                
-                if (opcao == 'S' || opcao == 's')
-                    validacao = true;
-                
-                else
-                    validacao = false;                
+    		opcao = entrada.next().charAt(0);               
 	    }
 	    catch (Exception erro)
             {                
-	        System.out.println("Entrada incorreta");
+	        System.out.println("Entrada incorreta.\n");
                 return;
 	    }
 	}
-	while (validacao == true);
+	while (opcao == 'S' || opcao == 's');
     }   
 }
